@@ -16,7 +16,7 @@
   "author": "Doniyor <edoniyorbekdev@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/OWNER/use-print-hook.git"
+    "url": "git+https://github.com/doniyorswe/use-print-hook.git"
   },
   "type": "module",
   "sideEffects": false,

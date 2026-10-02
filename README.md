@@ -331,7 +331,7 @@ pnpm --filter use-print-hook-next-example dev
 ## Publishing
 
 - **npm:** run `pnpm changeset` and merge to `main`. The Release workflow opens a version PR, and merging it publishes. The workflow needs an `NPM_TOKEN` secret.
-- **GitHub Packages:** after an npm release, the same workflow publishes `@<owner>/use-print-hook` to `npm.pkg.github.com`. Consumers add `@<owner>:registry=https://npm.pkg.github.com` to `.npmrc`.
+- **GitHub Packages:** after an npm release, the same workflow publishes `@doniyorswe/use-print-hook` to `npm.pkg.github.com`. Consumers add `@doniyorswe:registry=https://npm.pkg.github.com` to `.npmrc`.
 - **Manual:** run `pnpm build && npm publish`.
 
 MIT
