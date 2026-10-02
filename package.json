@@ -1,0 +1,127 @@
+{
+  "name": "use-print-hook",
+  "version": "0.1.0",
+  "description": "Headless, extensible print & export hook for React and Next.js",
+  "keywords": [
+    "react",
+    "nextjs",
+    "print",
+    "pdf",
+    "export",
+    "hook",
+    "iframe",
+    "headless"
+  ],
+  "license": "MIT",
+  "author": "Doniyor <edoniyorbekdev@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OWNER/use-print-hook.git"
+  },
+  "type": "module",
+  "sideEffects": false,
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    },
+    "./pdf": {
+      "import": {
+        "types": "./dist/pdf/index.d.ts",
+        "default": "./dist/pdf/index.js"
+      },
+      "require": {
+        "types": "./dist/pdf/index.d.cts",
+        "default": "./dist/pdf/index.cjs"
+      }
+    },
+    "./image": {
+      "import": {
+        "types": "./dist/image/index.d.ts",
+        "default": "./dist/image/index.js"
+      },
+      "require": {
+        "types": "./dist/image/index.d.cts",
+        "default": "./dist/image/index.cjs"
+      }
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:e2e": "pnpm build && playwright test",
+    "size": "node scripts/size.mjs",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "release": "pnpm build && changeset publish",
+    "prepublishOnly": "pnpm build"
+  },
+  "peerDependencies": {
+    "html-to-image": ">=1.11",
+    "jspdf": ">=2.5",
+    "react": ">=18",
+    "react-dom": ">=18"
+  },
+  "peerDependenciesMeta": {
+    "html-to-image": {
+      "optional": true
+    },
+    "jspdf": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@changesets/cli": "^3.0.3",
+    "@eslint/js": "^10.0.1",
+    "@playwright/test": "^1.63.0",
+    "@testing-library/dom": "^10.4.2",
+    "@testing-library/jest-dom": "^7.0.1",
+    "@testing-library/react": "^16.3.3",
+    "@types/node": "22",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "esbuild": "^0.28.2",
+    "eslint": "^10.11.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "globals": "^17.13.0",
+    "html-to-image": "^1.11.13",
+    "jsdom": "^30.1.1",
+    "jspdf": "^4.2.1",
+    "prettier": "^3.9.9",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "tsup": "^8.5.1",
+    "typescript": "~6.0.3",
+    "typescript-eslint": "^8.71.0",
+    "vitest": "^5.0.3"
+  },
+  "packageManager": "pnpm@9.15.9",
+  "engines": {
+    "node": ">=18"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

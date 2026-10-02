@@ -1,0 +1,9 @@
+.font-vars {
+  --brand-font: 'Courier New', monospace;
+}
+.title {
+  color: rgb(255, 0, 0);
+}
+.font {
+  font-family: var(--brand-font);
+}
